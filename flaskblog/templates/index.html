@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="mx-auto" style="width: 80%">
+    {% for post in posts %}
+    <div class="card mt-2">
+        <small class="ml-3 mt-2">By {{ post.author.username }}
+            on {{ post.date_posted.strftime('%d-%m-%Y') }}</small>
+        <hr>
+        <div class="card-body">
+            <h5 class="card-title"><a href="{{ url_for('get_post', post_id=post.id)}}">{{ post.title }}</a></h5>
+            <p class="card-text">{{ post.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
