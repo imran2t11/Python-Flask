@@ -1,3 +1,6 @@
 # Python-Flask
 
-This is web simple blog project.
+This is simple web blog project by python.
+DB: SQLAlchemy
+Also used bcrypt for password security
+
